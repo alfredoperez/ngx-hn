@@ -1,6 +1,8 @@
-#Ngx-Hacker News
-[![Build Status](https://travis-ci.org/alfredoperez/ngx-hn.svg?branch=master)](https://travis-ci.org/alfredoperez/ngx-hn)
-###HN PWA Stats
+#Ngx-Hacker News 
+[![Build Status](https://travis-ci.org/alfredoperez/ngx-hn.svg?branch=master)](https://travis-ci.org/alfredoperez/ngx-hn)  
+ 
+ 
+##HN PWA Stats  
 Lighthouse:
 91/100
 
