@@ -1,0 +1,68 @@
+/*
+Error: Invalid CSS after "...b(66, 165, 245)": expected selector or at-rule, was ");"
+        on line 13 of ../../scss/theme_variables.scss
+        from line 2 of error-message.component.scss
+
+8: $theme-day-body-background-color: #fff;
+9: $theme-day-wrapper-background-color: #f5f5f5;
+10: $theme-day-wrapper-mobile-background-color: #fff;
+11: $theme-day-text-color: #000;
+12: $theme-day-subtext-color: #696969;
+13: $theme-day-secondary-color: rgb(66, 165, 245));
+14: $theme-day-header-background-color: $theme-day-secondary-color;
+15: $theme-day-logo-inner: #fff;
+16: 
+17: // Day theme extras
+18: $theme-day-border: rgb(66, 165, 245);
+
+Backtrace:
+../../scss/theme_variables.scss:13
+error-message.component.scss:2
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/scss/parser.rb:1207:in `expected'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/scss/parser.rb:1137:in `expected'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/scss/parser.rb:42:in `parse'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/engine.rb:409:in `_to_tree'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/engine.rb:315:in `to_tree'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:327:in `block in visit_import'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/stack.rb:88:in `block in with_import'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/stack.rb:115:in `with_frame'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/stack.rb:88:in `with_import'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:326:in `visit_import'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/stack.rb:79:in `block in with_base'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/stack.rb:115:in `with_frame'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/stack.rb:79:in `with_base'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:162:in `visit'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:52:in `map'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:171:in `block in visit_children'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:170:in `visit_children'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:190:in `visit_root'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:161:in `visit'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:10:in `visit'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/tree/root_node.rb:36:in `css_tree'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/engine.rb:384:in `_render_with_sourcemap'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/engine.rb:301:in `render_with_sourcemap'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/plugin/compiler.rb:209:in `each'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/plugin.rb:82:in `update_stylesheets'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/exec/sass_scss.rb:340:in `watch_or_update'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/exec/sass_scss.rb:51:in `process_result'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/exec/base.rb:52:in `parse'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/exec/base.rb:19:in `parse!'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/bin/scss:13:in `<top (required)>'
+C:/Ruby24-x64/bin/scss:22:in `load'
+C:/Ruby24-x64/bin/scss:22:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"...b(66, 165, 245)\": expected selector or at-rule, was \");\"\A         on line 13 of ../../scss/theme_variables.scss\A         from line 2 of error-message.component.scss\A \A 8: $theme-day-body-background-color: #fff;\A 9: $theme-day-wrapper-background-color: #f5f5f5;\A 10: $theme-day-wrapper-mobile-background-color: #fff;\A 11: $theme-day-text-color: #000;\A 12: $theme-day-subtext-color: #696969;\A 13: $theme-day-secondary-color: rgb(66, 165, 245));\A 14: $theme-day-header-background-color: $theme-day-secondary-color;\A 15: $theme-day-logo-inner: #fff;\A 16: \A 17: // Day theme extras\A 18: $theme-day-border: rgb(66, 165, 245);"; }

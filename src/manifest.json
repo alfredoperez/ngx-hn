@@ -1,0 +1,21 @@
+{
+  "name": "Ngx Hacker News",
+  "short_name": "Ngx-HN",
+  "background_color": "#1976d2",
+  "theme_color": "#1976d2",
+  "display": "standalone",
+  "orientation": "portrait",
+  "start_url": "./?utm_source=web_app_manifest",
+  "icons": [
+    {
+      "src": "assets/icons/icon-194x194.png",
+      "sizes": "194x194 512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/icons/icon-144x144.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

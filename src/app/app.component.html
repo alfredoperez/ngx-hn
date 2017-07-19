@@ -1,0 +1,38 @@
+<div class="shell">
+
+  <header class="header">
+    <div class="links">
+      <a routerLink="/news/1" routerLinkActive="active" (click)="scrollTop()">
+
+        <img class="logo" src="assets/app-icon.png" alt="Logo">
+      </a>
+      <span class="header-nav">
+            <a routerLink="/newest/1"
+               routerLinkActive="active"
+               (click)="scrollTop()">new</a>
+              |
+            <a routerLink="/show/1"
+               routerLinkActive="active"
+               (click)="scrollTop()">show</a>
+              |
+            <a routerLink="/ask/1"
+               routerLinkActive="active"
+               (click)="scrollTop()">ask</a>
+              |
+            <a routerLink="/jobs/1"
+               routerLinkActive="active"
+               (click)="scrollTop()">jobs</a>
+          </span>
+    </div>
+  </header>
+
+  <router-outlet></router-outlet>
+
+
+  <div class="footer">
+    <p>Show this project some ❤ on
+      <a href="https://github.com/alfredoperez/ngx-hn" target="_blank" rel="noopener">GitHub</a>
+    </p>
+  </div>
+</div>
+

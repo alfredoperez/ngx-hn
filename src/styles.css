@@ -1,0 +1,118 @@
+/* ----------------------------------
+
+  Want a new theme? Add your new theme variables here!
+
+---------------------------------- */
+.default .body-cover {
+  background: #fff; }
+  @media only screen and (max-width: 768px) {
+    .default .body-cover {
+      background: #fff; } }
+.default .wrapper {
+  background: #f5f5f5;
+  color: #000; }
+  @media only screen and (max-width: 768px) {
+    .default .wrapper {
+      background: #fff; } }
+  .default .wrapper a {
+    color: #000; }
+    .default .wrapper a:visited {
+      color: #696969; }
+  .default .wrapper #header {
+    background: #42a5f5;
+    border-bottom: #42a5f5; }
+  .default .wrapper .logo-inner {
+    background: #fff; }
+  .default .wrapper .nav a {
+    color: #42a5f5; }
+    @media only screen and (max-width: 768px) {
+      .default .wrapper .nav a {
+        color: #42a5f5; } }
+  .default .wrapper #footer {
+    border-top: #42a5f5; }
+    .default .wrapper #footer a {
+      color: #42a5f5; }
+  .default .wrapper .subtext, .default .wrapper .subtext-palm, .default .wrapper .subtext-laptop, .default .wrapper .domain, .default .wrapper .meta, .default .wrapper .deleted-meta {
+    color: #696969; }
+    .default .wrapper .subtext a, .default .wrapper .subtext-palm a, .default .wrapper .subtext-laptop a, .default .wrapper .domain a, .default .wrapper .meta a, .default .wrapper .deleted-meta a {
+      color: #42a5f5; }
+  .default .wrapper .popup {
+    background: #42a5f5; }
+  .default .wrapper .item-header {
+    border-bottom: #42a5f5; }
+    @media only screen and (max-width: 768px) {
+      .default .wrapper .item-header {
+        background: #fff; } }
+  .default .wrapper .pollContent .pollBar {
+    background: #42a5f5; }
+  .default .wrapper .loader {
+    color: #42a5f5;
+    background: #42a5f5; }
+    .default .wrapper .loader:before, .default .wrapper .loader:after {
+      background: #42a5f5; }
+  @media only screen and (max-width: 768px) {
+    .default .wrapper .job-header {
+      border-bottom: #42a5f5; } }
+  @media only screen and (max-width: 768px) {
+    .default .wrapper .back-button {
+      border-top: 0.3rem solid #42a5f5;
+      border-right: 0.3rem solid #42a5f5; } }
+  .default .wrapper .error-section .skull .head {
+    background-color: #42a5f5; }
+    .default .wrapper .error-section .skull .head:before, .default .wrapper .error-section .skull .head:after {
+      background-color: #f5f5f5; }
+      @media only screen and (max-width: 768px) {
+        .default .wrapper .error-section .skull .head:before, .default .wrapper .error-section .skull .head:after {
+          background-color: #fff; } }
+    .default .wrapper .error-section .skull .head .crack {
+      background-color: #f5f5f5; }
+      @media only screen and (max-width: 768px) {
+        .default .wrapper .error-section .skull .head .crack {
+          background-color: #fff; } }
+      .default .wrapper .error-section .skull .head .crack:before {
+        border-top: 25px solid #f5f5f5; }
+        @media only screen and (max-width: 768px) {
+          .default .wrapper .error-section .skull .head .crack:before {
+            border-top: 25px solid #fff; } }
+  .default .wrapper .error-section .skull .mouth {
+    background-color: #42a5f5; }
+    .default .wrapper .error-section .skull .mouth:before {
+      background-color: #f5f5f5; }
+      @media only screen and (max-width: 768px) {
+        .default .wrapper .error-section .skull .mouth:before {
+          background-color: #fff; } }
+  .default .wrapper .error-section .skull .teeth {
+    background-color: #f5f5f5; }
+    @media only screen and (max-width: 768px) {
+      .default .wrapper .error-section .skull .teeth {
+        background-color: #fff; } }
+    .default .wrapper .error-section .skull .teeth:before, .default .wrapper .error-section .skull .teeth:after {
+      background-color: #f5f5f5; }
+      @media only screen and (max-width: 768px) {
+        .default .wrapper .error-section .skull .teeth:before, .default .wrapper .error-section .skull .teeth:after {
+          background-color: #fff; } }
+  .default .wrapper .main-details .name {
+    color: #42a5f5; }
+  .default .wrapper .main-details .right {
+    color: #42a5f5; }
+
+/* ----------------------------------
+
+  Include your new theme here as well as the settings component
+
+---------------------------------- */
+html {
+  height: 100%;
+  width: 100%; }
+
+body {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size: 15px; }
+
+pre {
+  white-space: pre-wrap; }
+
+/*# sourceMappingURL=styles.css.map */
