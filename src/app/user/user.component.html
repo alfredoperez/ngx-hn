@@ -1,0 +1,19 @@
+
+<app-error-message [message]="errorMessage" *ngIf="!user && errorMessage !== ''"></app-error-message>
+
+<div *ngIf="user" class="profile">
+  <div class="mobile item-header">
+    <p class="title-block">
+      <span class="back-button" (click)="goBack()"></span>
+      Profile: {{ user.id }}
+    </p>
+  </div>
+  <div class="main-details">
+    <span class="name">{{ user.id }}</span>
+    <span class="right">{{ user.karma }} ★</span>
+    <p class="age">Created {{ user.created }}</p>
+  </div>
+  <div class="other-details" *ngIf="user.about">
+    <p [innerHTML]="user.about"></p>
+  </div>
+</div>

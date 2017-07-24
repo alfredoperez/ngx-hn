@@ -4,10 +4,10 @@ import { HttpModule } from '@angular/http';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
-import { FeedComponent } from "./feeds/feed/feed.component";
-import { Routes, RouterModule } from "@angular/router";
-import { ItemComponent } from "./feeds/item/item.component";
-import { SharedModule } from "./shared/shared.module";
+import { FeedComponent } from './feeds/feed/feed.component';
+import { Routes, RouterModule } from '@angular/router';
+import { ItemComponent } from './feeds/item/item.component';
+import { SharedModule } from './shared/shared.module';
 
 const feedRoutes = [{
   path: ':page',
@@ -15,32 +15,32 @@ const feedRoutes = [{
 }];
 
 const routes: Routes = [
-  { path: 'loading', loadChildren: 'app/loading.module#LoadingModule' },
-  { path: '', redirectTo: 'news/1', pathMatch: 'full' },
+  {path: 'user', loadChildren: 'app/user/user.module#UserModule'},
+  {path: '', redirectTo: 'news/1', pathMatch: 'full'},
   {
     path: 'news',
     children: feedRoutes,
-    data: { feedType: 'news' }
+    data: {feedType: 'news'}
   },
   {
     path: 'newest',
     children: feedRoutes,
-    data: { feedType: 'newest' }
+    data: {feedType: 'newest'}
   },
   {
     path: 'show',
     children: feedRoutes,
-    data: { feedType: 'show' }
+    data: {feedType: 'show'}
   },
   {
     path: 'ask',
     children: feedRoutes,
-    data: { feedType: 'ask' }
+    data: {feedType: 'ask'}
   },
   {
     path: 'jobs',
     children: feedRoutes,
-    data: { feedType: 'jobs' }
+    data: {feedType: 'jobs'}
   }
 
 ];
@@ -51,7 +51,7 @@ const routes: Routes = [
     ItemComponent
   ],
   imports: [
-    BrowserModule.withServerTransition({ appId: 'ngx-starter' }),
+    BrowserModule.withServerTransition({appId: 'ngx-starter'}),
     NoopAnimationsModule,
     HttpModule,
     RouterModule.forRoot(routes),

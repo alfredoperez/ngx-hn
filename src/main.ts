@@ -4,7 +4,7 @@ import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { AppModule } from './app/app.module';
 import { environment } from './environments/environment';
 
-if (environment.production) {
+if ( environment.production ) {
   enableProdMode();
 }
 
@@ -15,19 +15,19 @@ platformBrowserDynamic()
 let registration;
 
 function registerServiceWorker() {
-  if ('serviceWorker' in navigator) {
+  if ( 'serviceWorker' in navigator ) {
     navigator.serviceWorker
       .register('/worker-basic.min.js')
       .then(reg => {
         registration = reg;
-        swLog('Registration successful', registration);
+        // swLog('Registration successful', registration);
         registration.onupdatefound = () => checkServiceWorkerStateChange();
       })
       .catch(e =>
-        console.error('Error during service worker registration:', e)
+          console.error('Error during service worker registration:', e)
       );
   } else {
-    console.warn('Service Worker is not supported');
+    // console.warn('Service Worker is not supported');
   }
 }
 
@@ -36,9 +36,9 @@ function checkServiceWorkerStateChange() {
   const installingWorker = registration.installing;
 
   installingWorker.onstatechange = () => {
-    switch (installingWorker.state) {
+    switch ( installingWorker.state ) {
       case 'installed':
-        if (navigator.serviceWorker.controller) {
+        if ( navigator.serviceWorker.controller ) {
           swLog('New or updated content is available', installingWorker);
         } else {
           swLog('Content is now available offline', installingWorker);
@@ -59,7 +59,7 @@ function checkServiceWorkerStateChange() {
 
 function swLog(eventName, event?) {
   console.log('Service Worker - ' + eventName);
-  if (event) {
+  if ( event ) {
     console.log(event);
   }
 }
