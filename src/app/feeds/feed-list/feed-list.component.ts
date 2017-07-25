@@ -7,7 +7,7 @@ import { Story } from '../../core/data/models/story';
 
 @Component({
   moduleId: module.id,
-  selector: 'app-feed',
+  selector: 'app-feed-list',
   templateUrl: './feed-list.component.html',
   styleUrls: ['./feed-list.component.css']
 })

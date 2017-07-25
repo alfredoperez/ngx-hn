@@ -5,8 +5,8 @@ import { Subscription } from 'rxjs/Subscription';
 import { HackerNewsAPIService } from '../core/data/services/hackernews-api.service';
 import { User } from '../core/data/models/user';
 
-
 @Component({
+  moduleId: module.id,
   selector: 'app-user',
   templateUrl: './user.component.html',
   styleUrls: ['./user.component.css']
