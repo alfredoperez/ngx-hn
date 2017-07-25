@@ -1,6 +1,6 @@
 {
   "name": "ngx-hn",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "license": "MIT",
   "scripts": {
     "ng": "ng",
@@ -11,7 +11,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "bundle-report": "webpack-bundle-analyzer dist/stats.json",
-    "ngu" : "npm run ngu-app-shell && npm run ngu-sw-manifest && npm run ngu-firebase-push",
+    "ngu": "npm run ngu-app-shell && npm run ngu-sw-manifest && npm run ngu-firebase-push",
     "ngu-app-shell": "./node_modules/.bin/ngu-app-shell --module src/app/app.module.ts --url /loading --insert-module src/app/loading.module.ts   --out dist/index.html",
     "ngu-sw-manifest": "./node_modules/.bin/ngu-sw-manifest --module src/app/app.module.ts --out dist/ngsw-manifest.json",
     "ngu-firebase-push": "./node_modules/.bin/ngu-firebase-push --module src/app/app.module.ts --out firebase.json --in firebase_config.json"

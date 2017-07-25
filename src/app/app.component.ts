@@ -8,8 +8,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   public title = 'Ngx Hacker News';
-  public theme: string;
-
   constructor() {
   }
 

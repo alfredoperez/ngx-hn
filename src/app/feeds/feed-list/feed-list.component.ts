@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs/Observable';
 import { Subscription } from 'rxjs/Subscription';
 import { ActivatedRoute } from '@angular/router';
 
@@ -8,12 +7,12 @@ import { Story } from '../../core/data/models/story';
 
 @Component({
   moduleId: module.id,
-  selector: 'app-feed',
-  templateUrl: './feed.component.html',
-  styleUrls: ['./feed.component.css']
+  selector: 'app-feed-list',
+  templateUrl: './feed-list.component.html',
+  styleUrls: ['./feed-list.component.css']
 })
 
-export class FeedComponent implements OnInit {
+export class FeedListComponent implements OnInit {
   public typeSub: Subscription;
   public pageSub: Subscription;
   public items: Story[];
@@ -26,7 +25,7 @@ export class FeedComponent implements OnInit {
               private route: ActivatedRoute) {
   }
 
-  public  ngOnInit() {
+  public ngOnInit() {
     this.typeSub = this.route
       .data
       .subscribe(data => {
@@ -36,14 +35,24 @@ export class FeedComponent implements OnInit {
     this.pageSub = this.route.params.subscribe(params => {
       this.pageNum = params['page'] ? +params['page'] : 1;
       this._hackerNewsAPIService.fetchFeed(this.feedType, this.pageNum)
+
         .subscribe(
           items => this.items = items,
           error => this.errorMessage = 'Could not load ' + this.feedType + ' stories.',
           () => {
             this.listStart = ((this.pageNum - 1) * 30) + 1;
+            let counter = 0;
+            this.items.forEach(item => {
+              item.index = this.listStart + counter++;
+            })
             window.scrollTo(0, 0);
           }
-        );
+        )
+
     });
+  }
+
+  public trackByFn(_: number, item: any): number {
+    return item.id;
   }
 }

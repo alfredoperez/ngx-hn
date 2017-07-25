@@ -1,38 +1,33 @@
-<div class="shell">
+<header>
+  <a routerLink="/newest/1"><img class="logo" src="assets/app-icon.png" alt="Logo"></a>
+  <nav>
+    <ul class="nav">
+      <li routerLinkActive="active">
+        <a routerLink="/newest/1" (click)="scrollTop()">new</a>
+      </li>
+      <li routerLinkActive="active">
+        <a routerLink="/show/1" (click)="scrollTop()">show
+        </a>
+      </li>
+      <li routerLinkActive="active">
+        <a routerLink="/ask/1" (click)="scrollTop()">ask
+        </a>
+      </li>
+      <li routerLinkActive="active">
+        <a routerLink="/jobs/1"
+           (click)="scrollTop()">jobs
+        </a>
+      </li>
+    </ul>
+  </nav>
+</header>
 
-  <header class="header">
-    <div class="links">
-      <a routerLink="/news/1" routerLinkActive="active" (click)="scrollTop()">
-
-        <img class="logo" src="assets/app-icon.png" alt="Logo">
-      </a>
-      <span class="header-nav">
-            <a routerLink="/newest/1"
-               routerLinkActive="active"
-               (click)="scrollTop()">new</a>
-              |
-            <a routerLink="/show/1"
-               routerLinkActive="active"
-               (click)="scrollTop()">show</a>
-              |
-            <a routerLink="/ask/1"
-               routerLinkActive="active"
-               (click)="scrollTop()">ask</a>
-              |
-            <a routerLink="/jobs/1"
-               routerLinkActive="active"
-               (click)="scrollTop()">jobs</a>
-          </span>
-    </div>
-  </header>
-
+<main>
   <router-outlet></router-outlet>
+</main>
 
 
-  <div class="footer">
-    <p>Show this project some ❤ on
-      <a href="https://github.com/alfredoperez/ngx-hn" target="_blank" rel="noopener">GitHub</a>
-    </p>
-  </div>
+<div id="footer">
+  <p>Show this project some ❤ on <a href="https://github.com/hdjirdeh/angular2-hn" target="_blank" rel="noopener">GitHub</a></p>
 </div>
 

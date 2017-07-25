@@ -18,6 +18,7 @@ cache:
 branches:
   only:
     - master
+    - /.*/
 before_install:
   - export CHROME_BIN=/usr/bin/google-chrome
   - export DISPLAY=:99.0
