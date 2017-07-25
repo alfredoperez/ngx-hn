@@ -1,0 +1,49 @@
+<div class="pages" *ngIf="items">
+  <a *ngIf="listStart === 1" class="disabled">‹ Prev</a>
+  <a [routerLink]="['/' + feedType, pageNum - 1]"
+     routerLinkActive="active" class="prev"
+     *ngIf="listStart !== 1">
+    ‹ Prev
+  </a> |
+  <a [routerLink]="['/' + feedType, pageNum + 1]"
+     routerLinkActive="active" class="more"
+     *ngIf="items.length === 30">
+    Next ›
+  </a>
+  <a *ngIf="items.length  < 30" class="disabled"> Next ›</a>
+</div>
+
+<section class="articles">
+  <div *ngIf="!items && !errorMessage">
+    Loading...
+  </div>
+  <app-error-message [message]="errorMessage"
+                     *ngIf="!items && errorMessage !==''">
+  </app-error-message>
+  <div>
+    <p class="job-header" *ngIf="feedType === 'jobs'">
+      These are jobs at startups that were funded by Y Combinator. You can also get a job at a YC startup through <a
+      href="https://triplebyte.com/?ref=yc_jobs">Triplebyte</a>.
+    </p>
+    <section class="articles">
+      <div>
+        <article *ngFor="let item of items">
+          <span class="no">
+          {{ item.index }}
+          </span>
+          <div>
+            <h2>
+              <a [routerLink]="['/item', item.id]">{{ item.title }}</a>
+            </h2>
+            <div class="meta" *ngIf="item.type !== 'job'">
+              {{ item.points }} points by <a [routerLink]="['/user', item.user]" class="link"
+                                             routerLinkActive="active">{{item.user}}</a> {{ item.time_ago }} | <a
+              [routerLink]="['/item', item.id]" class="link">{{item.comments_count | comment }}</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+  </div>
+</section>

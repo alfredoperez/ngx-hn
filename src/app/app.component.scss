@@ -1,63 +1,62 @@
-@import "shared/scss/media.scss";
 @import "shared/scss/theme_variables.scss";
 
-.header {
+header {
+  background-color: $theme-primary;
+  color: $theme-secondary;
+  height: 50px;
+  padding: 0 10px;
   position: fixed;
   width: 100%;
   top: 0;
-  z-index: 100;
-  height: 55px;
-  padding: 0 16px;
-  background-color: $theme-day-secondary-color;
-  a {
-    display: inline;
-  }
 }
 
-.links {
-  position: absolute;
-  left: 20px;
-  font-size: 16px;
-  display: flex;
-  align-items: center;
-  height: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  overflow: hidden;
+main {
+  margin-top: 50px;
+  padding-top: 15px;
 }
 
 .logo {
-  width: 150px;
-  padding: 3px 8px 0;
-
-  @media #{$mobile-only} {
-    width: 105px;
-    padding: 0 0 0 0px;
-  }
+  width: 135px;
+  height: 40px;
+  margin-top: 5px;
+  color: transparent;
+  float: left;
 }
 
-.header-nav {
+nav {
   display: inline-block;
-  margin-left: 20px;
-
-  a {
-    color: hsla(0, 0%, 100%, .9);
-    text-decoration: none;
-    margin: 0 5px;
-    letter-spacing: 1.8px;
-
-    &:hover {
-      color: gray;
-    }
-  }
-
-  .active {
-    color: gray;
-    font-weight: bolder;
-  }
 }
 
-.footer {
+.nav {
+  list-style: none;
+
+  padding: 0;
+  margin-left: 15px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-right: 0px;
+}
+
+.nav li {
+  margin: 0 7px;
+  padding: 0;
+  display: inline-block;
+}
+
+.nav li a {
+  line-height: 50px;
+  display: inline-block;
+  height: 45px;
+  color: $theme-secondary;
+  text-decoration: none;
+}
+
+.nav li.active a,
+.nav li a:hover {
+  border-bottom: 4px $theme-subtext-color solid;
+}
+
+#footer {
   position: relative;
   padding: 10px;
   height: 60px;

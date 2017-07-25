@@ -21,19 +21,20 @@ export class HackerNewsAPIService {
   }
 
   public fetchItemContent(id: number): Observable<Story> {
-    return lazyFetch(`${this.baseUrl}/item/${id}`).map((story: Story) => {
-      if (story.type === 'poll') {
-        const numberOfPollOptions = story.poll.length;
-        story.poll_votes_count = 0;
-        for (let i = 1; i <= numberOfPollOptions; i++) {
-          this.fetchPollContent(story.id + i).subscribe(pollResults => {
-            story.poll[i - 1] = pollResults;
-            story.poll_votes_count += pollResults.points;
-          });
+    return lazyFetch(`${this.baseUrl}/item/${id}`)
+      .map((story: Story) => {
+        if ( story.type === 'poll' ) {
+          const numberOfPollOptions = story.poll.length;
+          story.poll_votes_count = 0;
+          for ( let i = 1; i <= numberOfPollOptions; i++ ) {
+            this.fetchPollContent(story.id + i).subscribe(pollResults => {
+              story.poll[i - 1] = pollResults;
+              story.poll_votes_count += pollResults.points;
+            });
+          }
         }
-      }
-      return story;
-    });
+        return story;
+      });
   }
 
   public fetchPollContent(id: number): Observable<PollResult> {
@@ -50,7 +51,7 @@ function lazyFetch(url, options?) {
     let cancelToken = false;
     fetch(url, options)
       .then(res => {
-        if (!cancelToken) {
+        if ( !cancelToken ) {
           return res.json()
             .then(data => {
               fetchObserver.next(data);

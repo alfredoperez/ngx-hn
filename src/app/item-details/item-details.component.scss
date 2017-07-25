@@ -1,0 +1,151 @@
+@import "../shared/scss/media";
+@import "../shared/scss/theme_variables";
+
+.main-content {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  -webkit-transition: opacity .2s ease;
+  transition: opacity .2s ease;
+  box-sizing: border-box;
+  padding: 8px 0;
+  z-index: 0;
+}
+
+.item {
+  box-sizing: border-box;
+  padding: 10px 40px 0 40px;
+  z-index: 0;
+}
+
+@media #{$tablet-only} {
+  .item {
+    padding: 10px 20px 0 40px;
+  }
+}
+
+@media #{$mobile-only} {
+  .item {
+    box-sizing: border-box;
+    padding: 110px 15px 0 15px;
+  }
+}
+
+.head-margin {
+  margin-bottom: 15px;
+}
+
+p {
+  margin: 2px 0;
+}
+
+.subject {
+  word-wrap: break-word;
+  margin-top: 20px;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+@media #{$mobile-only} {
+  .laptop {
+    display: none;
+  }
+}
+
+@media #{$laptop-only} {
+  .mobile {
+    display: none;
+  }
+}
+
+.title {
+  font-size: 16px;
+  font-family: Verdana, Geneva, sans-serif;
+}
+
+.title-block {
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  margin: 0 75px;
+}
+
+@media #{$mobile-only} {
+  .title {
+    font-size: 15px;
+  }
+  .back-button {
+    position: absolute;
+    top: 52%;
+    width: 0.6rem;
+    height: 0.6rem;
+    background: transparent;
+    box-shadow: 0 0 0 lightgray;
+    transition: all 200ms ease;
+    left: 4%;
+    transform: translate3d(0, -50%, 0) rotate(-135deg);
+  }
+}
+
+.subtext {
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+.domain {
+  letter-spacing: 0.5px;
+}
+
+.subtext a {
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.item-details {
+  padding: 10px;
+}
+
+.item-header {
+  padding-bottom: 10px;
+}
+
+@media #{$mobile-only} {
+  .item-header {
+    padding: 10px 0 10px 0;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 62px;
+  }
+}
+
+.pollResults {
+  margin-bottom: 1em;
+}
+
+.pollContent {
+  * {
+    padding-bottom: 0;
+    margin-bottom: -1em;
+    margin-top: 1em;
+  }
+  .pollBar {
+    height: 10px;
+    margin-bottom: 1em;
+  }
+}
+
+ul {
+  list-style-type: none;
+  padding: 10px 0;
+}
+
+li {
+  display: list-item;
+}

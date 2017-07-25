@@ -18,4 +18,5 @@ export class Story {
     poll_votes_count: number;
     deleted: boolean;
     dead: boolean;
+    index: number;
 }
