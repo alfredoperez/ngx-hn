@@ -1,7 +1,5 @@
 .main-content {
-  position: relative;
   width: 100%;
-  min-height: 100vh;
   -webkit-transition: opacity .2s ease;
   transition: opacity .2s ease;
   box-sizing: border-box;
@@ -13,13 +11,6 @@
   padding: 10px 40px 0 40px;
   z-index: 0; }
 
-@media only screen and (max-width: 1024px) {
-  .item {
-    padding: 10px 20px 0 40px; } }
-@media only screen and (max-width: 768px) {
-  .item {
-    box-sizing: border-box;
-    padding: 110px 15px 0 15px; } }
 .head-margin {
   margin-bottom: 15px; }
 
@@ -34,12 +25,6 @@ a {
   cursor: pointer;
   text-decoration: none; }
 
-@media only screen and (max-width: 768px) {
-  .laptop {
-    display: none; } }
-@media only screen and (min-width: 769px) {
-  .mobile {
-    display: none; } }
 .title {
   font-size: 16px;
   font-family: Verdana, Geneva, sans-serif; }
@@ -51,20 +36,6 @@ a {
   overflow: hidden;
   margin: 0 75px; }
 
-@media only screen and (max-width: 768px) {
-  .title {
-    font-size: 15px; }
-
-  .back-button {
-    position: absolute;
-    top: 52%;
-    width: 0.6rem;
-    height: 0.6rem;
-    background: transparent;
-    box-shadow: 0 0 0 lightgray;
-    transition: all 200ms ease;
-    left: 4%;
-    transform: translate3d(0, -50%, 0) rotate(-135deg); } }
 .subtext {
   font-size: 12px;
   font-weight: bold;
@@ -82,13 +53,6 @@ a {
 .item-header {
   padding-bottom: 10px; }
 
-@media only screen and (max-width: 768px) {
-  .item-header {
-    padding: 10px 0 10px 0;
-    position: fixed;
-    width: 100%;
-    left: 0;
-    top: 62px; } }
 .pollResults {
   margin-bottom: 1em; }
 

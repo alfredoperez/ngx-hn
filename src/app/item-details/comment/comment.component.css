@@ -17,13 +17,6 @@
   .meta .time {
     padding-left: 5px; }
 
-@media only screen and (max-width: 768px) {
-  .meta {
-    font-size: 14px;
-    margin-bottom: 10px; }
-    .meta .time {
-      padding: 0;
-      float: right; } }
 .meta-collapse {
   margin-bottom: 20px; }
 
@@ -43,9 +36,6 @@
 .comment-tree {
   margin-left: 24px; }
 
-@media only screen and (max-width: 1024px) {
-  .comment-tree {
-    margin-left: 8px; } }
 .comment-text {
   font-size: 15px;
   margin-top: 0;
