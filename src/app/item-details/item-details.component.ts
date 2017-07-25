@@ -6,6 +6,7 @@ import { Story } from '../core/data/models/story';
 import { HackerNewsAPIService } from '../core/data/services/hackernews-api.service';
 
 @Component({
+  moduleId: module.id,
   selector: 'app-item-details',
   templateUrl: './item-details.component.html',
   styleUrls: ['./item-details.component.css']
@@ -15,11 +16,9 @@ export class ItemDetailsComponent implements OnInit {
   item: Story;
   errorMessage = '';
 
-  constructor(
-    private _hackerNewsAPIService: HackerNewsAPIService,
-    private route: ActivatedRoute,
-    private _location: Location
-  ) {
+  constructor(private _hackerNewsAPIService: HackerNewsAPIService,
+              private route: ActivatedRoute,
+              private _location: Location) {
 
   }
 
