@@ -1,16 +1,14 @@
 <div class="pages" *ngIf="items">
-  <a *ngIf="listStart === 1" class="disabled">‹ Prev</a>
-  <a [routerLink]="['/' + feedType, pageNum - 1]"
-     routerLinkActive="active" class="prev"
-     *ngIf="listStart !== 1">
-    ‹ Prev
-  </a> |
-  <a [routerLink]="['/' + feedType, pageNum + 1]"
-     routerLinkActive="active" class="more"
-     *ngIf="items.length === 30">
-    Next ›
-  </a>
-  <a *ngIf="items.length  < 30" class="disabled"> Next ›</a>
+  <div class="pagination">
+    <a routerLink="./" [queryParams]="{page: prevPage}"
+       class="pagination-link" [class.disabled]="pageNumber == 1">‹ Prev
+    </a>
+    <a routerLink="./" [queryParams]="{page: nextPage}"
+       class="pagination-link" [class.disabled]="items.length <30">
+      Next ›
+    </a>
+  </div>
+
 </div>
 
 <section class="articles">
@@ -36,9 +34,14 @@
               <a [routerLink]="['/item', item.id]">{{ item.title }}</a>
             </h2>
             <div class="meta" *ngIf="item.type !== 'job'">
-              {{ item.points }} points by <a [routerLink]="['/user', item.user]" class="link"
-                                             routerLinkActive="active">{{item.user}}</a> {{ item.time_ago }} | <a
-              [routerLink]="['/item', item.id]" class="link">{{item.comments_count | comment }}</a>
+              {{item.points | point }} by
+              <a [routerLink]="['/user', item.user]" routerLinkActive="active"
+                 class="link">{{item.user}}
+              </a>
+              {{ item.time_ago }} |
+              <a [routerLink]="['/item', item.id]" class="link">
+                {{item.comments_count | comment }}
+              </a>
             </div>
           </div>
         </article>

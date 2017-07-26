@@ -1,21 +1,23 @@
 <header>
-  <a routerLink="/newest/1"><img class="logo" src="assets/app-icon.png" alt="Logo"></a>
+  <a routerLink="/list/news/"><img class="logo" src="assets/logo.svg" alt="Logo"></a>
   <nav>
     <ul class="nav">
       <li routerLinkActive="active">
-        <a routerLink="/newest/1" (click)="scrollTop()">new</a>
+        <a routerLink="/list/news/" (click)="scrollTop()">top</a>
       </li>
       <li routerLinkActive="active">
-        <a routerLink="/show/1" (click)="scrollTop()">show
+        <a routerLink="/list/newest/" (click)="scrollTop()">new</a>
+      </li>
+      <li routerLinkActive="active">
+        <a routerLink="/list/show/" (click)="scrollTop()">show
         </a>
       </li>
       <li routerLinkActive="active">
-        <a routerLink="/ask/1" (click)="scrollTop()">ask
+        <a routerLink="/list/ask/" (click)="scrollTop()">ask
         </a>
       </li>
       <li routerLinkActive="active">
-        <a routerLink="/jobs/1"
-           (click)="scrollTop()">jobs
+        <a routerLink="/list/jobs/" (click)="scrollTop()">jobs
         </a>
       </li>
     </ul>
@@ -28,6 +30,7 @@
 
 
 <div id="footer">
-  <p>Show this project some ❤ on <a href="https://github.com/hdjirdeh/angular2-hn" target="_blank" rel="noopener">GitHub</a></p>
+  <p>Show this project some ❤ on <a href="https://github.com/alfredoperez/ngx-hn" target="_blank"
+                                    rel="noopener">GitHub</a></p>
 </div>
 
