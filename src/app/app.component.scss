@@ -16,7 +16,7 @@ main {
 }
 
 .logo {
-  width: 135px;
+  width: 60px;
   height: 40px;
   margin-top: 5px;
   color: transparent;
@@ -25,20 +25,21 @@ main {
 
 nav {
   display: inline-block;
+
 }
 
 .nav {
   list-style: none;
 
   padding: 0;
-  margin-left: 15px;
+  margin-left: 45px;
   margin-top: 0px;
   margin-bottom: 0px;
   margin-right: 0px;
 }
 
 .nav li {
-  margin: 0 7px;
+  margin: 0 3px;
   padding: 0;
   display: inline-block;
 }
@@ -46,7 +47,7 @@ nav {
 .nav li a {
   line-height: 50px;
   display: inline-block;
-  height: 45px;
+  height: 50px;
   color: $theme-secondary;
   text-decoration: none;
 }
