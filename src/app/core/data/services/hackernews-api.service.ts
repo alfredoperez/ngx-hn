@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
-import fetch from 'unfetch';
-import 'rxjs/add/operator/map';
+import 'unfetch/polyfill'
+import { map } from  'rxjs/operators';
 
 import { Story } from '../models/story';
 import { User } from '../models/user';
@@ -17,12 +17,12 @@ export class HackerNewsAPIService {
   }
 
   public fetchFeed(feedType: string, page: number): Observable<Story[]> {
-    return lazyFetch(`${this.baseUrl}/${feedType}?page=${page}`);
+    return <Observable<Story[]>>lazyFetch(`${this.baseUrl}/${feedType}?page=${page}`);
   }
 
   public fetchItemContent(id: number): Observable<Story> {
     return lazyFetch(`${this.baseUrl}/item/${id}`)
-      .map((story: Story) => {
+      .pipe(map((story: Story) => {
         if ( story.type === 'poll' ) {
           const numberOfPollOptions = story.poll.length;
           story.poll_votes_count = 0;
@@ -35,15 +35,15 @@ export class HackerNewsAPIService {
           }
         }
         return story;
-      });
+      }));
   }
 
   public fetchPollContent(id: number): Observable<PollResult> {
-    return lazyFetch(`${this.baseUrl}/item/${id}`);
+    return <Observable<PollResult>>lazyFetch(`${this.baseUrl}/item/${id}`);
   }
 
   public fetchUser(id: string): Observable<User> {
-    return lazyFetch(`${this.baseUrl}/user/${id}`);
+    return <Observable<User>>lazyFetch(`${this.baseUrl}/user/${id}`);
   }
 }
 
