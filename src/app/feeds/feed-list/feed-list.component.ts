@@ -3,9 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 
 import { HackerNewsAPIService } from '../../core/data/services/hackernews-api.service';
 import { Story } from '../../core/data/models/story';
-import { Observable } from 'rxjs/Observable';
-import 'rxjs/add/operator/switchMap';
-import 'rxjs/add/observable/combineLatest';
+import {combineLatest} from 'rxjs';
 
 @Component({
   moduleId: module.id,
@@ -27,8 +25,7 @@ export class FeedListComponent implements OnInit {
   }
 
   public ngOnInit() {
-    const obsComb = Observable
-      .combineLatest(this.route.params,
+    const obsComb = combineLatest(this.route.params,
         this.route.queryParams,
         (params, qparams) => ({params, qparams}));
 
